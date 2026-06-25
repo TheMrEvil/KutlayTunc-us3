@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@kutlaytunc/us3-core": ["../../packages/core/src/index.ts"],
+      "@kutlaytunc/us3-react": ["../../packages/react/src/index.ts"]
+    }
+  },
+  "include": ["src", "vite.config.ts"]
+}

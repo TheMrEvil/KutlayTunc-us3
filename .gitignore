@@ -1,0 +1,20 @@
+node_modules/
+dist/
+dist-webview/
+*.tsbuildinfo
+.vite/
+coverage/
+*.vsix
+.DS_Store
+.turbo/
+*.log
+.env
+.env.local
+
+
+# Claude Code local dev config
+.mcp.json
+.claude/
+
+# Internal working doc — kept local, not published
+currentrun.md

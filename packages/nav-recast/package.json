@@ -1,0 +1,46 @@
+{
+  "name": "@kutlaytunc/us3-nav-recast",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "recast-navigation NavProvider for us3 — bake a real navmesh from your scene geometry and feed it to the AI (behaviour trees, steering, crowds) unchanged.",
+  "license": "MIT",
+  "author": "KutlayTunc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KutlayTunc/us3.git",
+    "directory": "packages/nav-recast"
+  },
+  "keywords": ["us3", "recast-navigation", "navmesh", "pathfinding", "react-three-fiber", "three", "ai"],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": ["dist"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@kutlaytunc/us3-core": "workspace:*"
+  },
+  "peerDependencies": {
+    "@recast-navigation/core": ">=0.39.0",
+    "three": ">=0.159.0"
+  },
+  "devDependencies": {
+    "@recast-navigation/core": "^0.43.1",
+    "@recast-navigation/three": "^0.43.1",
+    "@types/three": "^0.184.0",
+    "three": "^0.184.0",
+    "typescript": "^5.7.0"
+  }
+}

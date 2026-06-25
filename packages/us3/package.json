@@ -1,0 +1,36 @@
+{
+  "name": "@kutlaytunc/us3",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "us3 — composable, R3F-native game-AI + animation runtime. Umbrella that re-exports @kutlaytunc/us3-core + @kutlaytunc/us3-ai (behaviour tree, perception, navigation, EQS) + @kutlaytunc/us3-anim (blend-space + state-machine animation graph) + @kutlaytunc/us3-react (R3F bindings).",
+  "license": "MIT",
+  "author": "KutlayTunc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KutlayTunc/us3.git",
+    "directory": "packages/us3"
+  },
+  "homepage": "https://github.com/KutlayTunc/us3",
+  "keywords": ["us3", "react-three-fiber", "r3f", "three", "game-ai", "behaviour-tree", "perception", "navmesh", "animation", "blendspace", "state-machine"],
+  "sideEffects": false,
+  "publishConfig": { "access": "public" },
+  "files": ["index.js", "index.d.ts"],
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": { "types": "./index.d.ts", "import": "./index.js" }
+  },
+  "dependencies": {
+    "@kutlaytunc/us3-core": "workspace:*",
+    "@kutlaytunc/us3-ai": "workspace:*",
+    "@kutlaytunc/us3-anim": "workspace:*",
+    "@kutlaytunc/us3-react": "workspace:*"
+  },
+  "peerDependencies": {
+    "@react-three/drei": ">=10.0.0",
+    "@react-three/fiber": ">=9.0.0",
+    "react": ">=18.0.0",
+    "three": ">=0.159.0"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "@kutlaytunc/us3-anim",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Headless, R3F-native animation graph over three's AnimationMixer: blend spaces (1D bracket / 2D Delaunay barycentric), a parameter-driven state machine, additive layers, and secondary motion (IK, foot-IK, look-at, inertialization, montage, notifies, sync). The blend layer is swappable via @kutlaytunc/us3-core's WeightSolver.",
+  "license": "MIT",
+  "author": "KutlayTunc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KutlayTunc/us3.git",
+    "directory": "packages/anim"
+  },
+  "keywords": ["us3", "animation", "blendspace", "blend-space", "state-machine", "ik", "inertialization", "montage", "three", "threejs", "react-three-fiber", "r3f", "animationmixer"],
+  "sideEffects": false,
+  "publishConfig": { "access": "public" },
+  "files": ["dist"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" }
+  },
+  "scripts": {
+    "build": "vite build --mode lib && pnpm build:types",
+    "build:types": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@kutlaytunc/us3-core": "workspace:*"
+  },
+  "peerDependencies": {
+    "three": ">=0.159.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.184.0",
+    "three": "^0.184.0",
+    "typescript": "^5.7.0",
+    "vite": "^7.1.0",
+    "vitest": "^3.0.0"
+  }
+}

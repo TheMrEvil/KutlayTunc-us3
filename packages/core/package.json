@@ -1,0 +1,35 @@
+{
+  "name": "@kutlaytunc/us3-core",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "The shared foundation for us3: pure in-house math (scalar helpers, 1D bracketing, 2D Delaunay barycentric) plus the two swap interfaces — NavProvider (navmesh-agnostic AI) and WeightSolver (drei-swappable blend layer). Zero runtime dependencies.",
+  "license": "MIT",
+  "author": "KutlayTunc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KutlayTunc/us3.git",
+    "directory": "packages/core"
+  },
+  "keywords": ["us3", "math", "delaunay", "barycentric", "navprovider", "weightsolver", "react-three-fiber", "r3f"],
+  "sideEffects": false,
+  "publishConfig": { "access": "public" },
+  "files": ["dist"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" }
+  },
+  "scripts": {
+    "build": "vite build --mode lib && pnpm build:types",
+    "build:types": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vite": "^7.1.0",
+    "vitest": "^3.0.0"
+  }
+}

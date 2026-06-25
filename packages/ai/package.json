@@ -1,0 +1,38 @@
+{
+  "name": "@kutlaytunc/us3-ai",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Headless, R3F-native game-AI runtime: behaviour tree, perception (sight cone / line-of-sight), navmesh path-following and EQS. Navmesh-agnostic via @kutlaytunc/us3-core's NavProvider. Zero runtime dependencies.",
+  "license": "MIT",
+  "author": "KutlayTunc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KutlayTunc/us3.git",
+    "directory": "packages/ai"
+  },
+  "keywords": ["us3", "game-ai", "behaviour-tree", "behavior-tree", "perception", "navmesh", "pathfinding", "eqs", "react-three-fiber", "r3f", "npc"],
+  "sideEffects": false,
+  "publishConfig": { "access": "public" },
+  "files": ["dist"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" }
+  },
+  "scripts": {
+    "build": "vite build --mode lib && pnpm build:types",
+    "build:types": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@kutlaytunc/us3-core": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vite": "^7.1.0",
+    "vitest": "^3.0.0"
+  }
+}

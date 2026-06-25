@@ -1,0 +1,51 @@
+{
+  "name": "@kutlaytunc/us3-ecctrl",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Bridge between us3's AI/navmesh and pmndrs/ecctrl — let a behaviour tree drive an ecctrl character: the AI picks a destination + path, ecctrl does the locomotion & physics.",
+  "license": "MIT",
+  "author": "KutlayTunc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KutlayTunc/us3.git",
+    "directory": "packages/ecctrl"
+  },
+  "keywords": ["us3", "ecctrl", "react-three-fiber", "ai", "navmesh", "pathfinding", "character-controller"],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": ["dist"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@kutlaytunc/us3-core": "workspace:*"
+  },
+  "peerDependencies": {
+    "@react-three/fiber": ">=9.0.0",
+    "ecctrl": ">=1.0.15",
+    "react": ">=18.0.0",
+    "three": ">=0.159.0"
+  },
+  "devDependencies": {
+    "@react-three/fiber": "^9.3.0",
+    "@react-three/rapier": "^2.1.0",
+    "@types/react": "^19.1.0",
+    "@types/three": "^0.184.0",
+    "ecctrl": "^2.0.0",
+    "react": "^19.1.0",
+    "three": "^0.184.0",
+    "typescript": "^5.7.0"
+  }
+}
