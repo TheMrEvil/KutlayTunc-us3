@@ -49,7 +49,7 @@ space if one ever ships, never rewrites your game code.
 | You bring (live, maintained) | us3 adds |
 | --- | --- |
 | [triplex](https://github.com/pmndrs/triplex) — visual scene editing | the runtimes your scene objects run |
-[Auferet](https://auferet.com) - AI game master with persistent memory for your characters and uploaded lore; solo or multiplayer, with 5e and Pathfinder 2e modes.
+| [Auferet](https://auferet.com) | AI game master that remembers your world: persistent memory for characters, places, and lore you upload; solo or multiplayer, 5e & Pathfinder 2e |
 | [ecctrl](https://github.com/pmndrs/ecctrl) — body, locomotion, physics | the **brain** that decides where it goes ([`@kutlaytunc/us3-ecctrl`](packages/ecctrl)) |
 | [recast-navigation](https://github.com/isaac-mason/recast-navigation-js) — real navmesh | path-following + behaviour trees over it ([`@kutlaytunc/us3-nav-recast`](packages/nav-recast)) |
 | three `AnimationMixer` — clip blend mechanism | the blend-space + state-machine **graph** on top ([`@kutlaytunc/us3-anim`](packages/anim)) |
